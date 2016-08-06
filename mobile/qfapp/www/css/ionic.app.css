@@ -9870,3 +9870,19 @@ h1, h2, h3, h4 {
   color: white;
   font-size: xx-large;
   padding-top: 15px; }
+
+#actionButton {
+  position: absolute; }
+
+/*.onBoardContent h2 {
+    margin-top: 50%;
+}*/
+.onBoardView .box {
+  background-image: url(https://hd.unsplash.com/photo-1450887169825-67cbce827da4);
+  background-size: cover;
+  background-position: right;
+  padding: 20px;
+  color: white; }
+
+.onBoardContent h2 {
+  margin-top: 50%; }

@@ -79,5 +79,16 @@ angular.module('qff.directives')
             'background-repeat': 'no-repeat'
         });
     };
+)
+.directive('timer', function() {
+    return {
+        restrict: 'E',
+        transclude: true,
+        scope: {
+            initMins: '=mins',
+            initSeconds: '=',
+
+        }
+    }
 })
 ;

@@ -3,3 +3,7 @@
 #actionButton {
     position: absolute;
 }
+
+.onBoardContent img {
+    margin-top: 50%;
+}
