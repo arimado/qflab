@@ -51,8 +51,7 @@ angular.module('qff.directives')
                 timer.minutes -= 1;
                 timer.seconds = 60;
             }
-        
-            console.log(timer);
+            $scope.$apply() 
         }, 1000)
         $scope.timer = timer;
     }
