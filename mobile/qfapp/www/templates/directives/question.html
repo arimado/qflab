@@ -1,6 +1,6 @@
-<div class="list">
-
-        <ion-checkbox ng-repeat="item in data track by $index">
-          {{ item.question }}
-        </ion-checkbox>
-</div>
+<ul class="list">
+        <li class="item item-icon-right" ng-repeat="item in data track by $index">
+            {{ item.question }}
+            <i class="icon ion-ios-arrow-right"></i>
+        </li>
+</ul>
