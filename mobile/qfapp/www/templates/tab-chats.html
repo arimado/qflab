@@ -1,14 +1,5 @@
 <ion-view view-title="Chats">
   <ion-content>
-      
-      <div class="list">
-        <ion-checkbox ng-repeat="item in tasks"
-                      ng-model="item.checked" 
-                      ng-checked="item.checked">
-          {{ item.name }}
-        </ion-checkbox>
-        
-      </div>
-      
+      <todo data="tasks"></todo>
     </ion-content>
 </ion-view>
