@@ -4,6 +4,7 @@
 
 .onBoard {
     height: 100%;
+    background: blue;
 }
 
 ion-content {
