@@ -1,10 +1,10 @@
 <div class="bar bar-header top-nav">
   <!-- todo bind to stages -->
-  <button class="button button-clear button-positive">
+  <button class="button button-clear button-positive" ng-click='scrollTo("stage-1")'>
     <i class="icon ion-record"></i>
   </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
+  <button class="button button-clear button-positive" ng-click='scrollTo("stage-2")'>
+    <a href="#1"><i class="icon ion-record"></i></a>
     </button>
   <button class="button button-clear button-positive">
     <i class="icon ion-record"></i>
@@ -32,11 +32,15 @@
   </button>
 </div>
 <ion-view view-title="Journey">
-  <ion-content class="cards-bg">
-    <a id="0"></a>
-    <preflight days=2 airport="'sydney'" destination="'usa'" tasks='tasks'></preflight>
+  <ion-content class="cards-bg" style="padding-top: 40px" delegate-handle="storyView">
+    <div class='card'>
+      <div class="item item-text-wrap">
+        <p>Wow, looks like a big journey ahead of you!</p>
+      </div>
+    </div>
 
-    <a id="1"></a>
-    <checkin airport="'syd'" airportname="'Sydney Kingsford Smith (International)'" terminal="'1'" gate="'J12'"></checkin>
+    <preflight id='stage-1' days=2 airport="'sydney'" destination="'usa'" tasks='tasks'></preflight>
+
+    <checkin id='stage-2' airport="'syd'" airportname="'Sydney Kingsford Smith (International)'" terminal="'1'" gate="'J12'"></checkin>
   </ion-content>
 </ion-view>
