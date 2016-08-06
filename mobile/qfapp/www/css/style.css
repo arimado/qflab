@@ -1,9 +1,57 @@
 /* Empty. Add your own CSS if you like */
 
+
+
 #actionButton {
     position: absolute;
 }
 
 .onBoardContent img {
     margin-top: 50%;
+}
+
+
+.tabs .tab-item .icon.qf-joey {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 80%;
+  background-image: url('/img/joey.svg');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.qf-offers {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('/img/offers.svg');
+  background-size:contain;
+  margin-top: 10px;
+}
+
+.tabs .tab-item .icon.qf-home {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('/img/home.svg');
+  background-size:contain;
+  margin-top: 10px;
+}
+
+.tabs .tab-item .icon.qf-trips {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('/img/trips.svg');
+  background-size:contain;
+    margin-top: 10px;
+}
+
+.tabs .tab-item .icon.qf-more {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 20%;
+  background-image: url('/img/more.svg');
+  background-size:contain;
+  margin-top: 20px;
+
 }
