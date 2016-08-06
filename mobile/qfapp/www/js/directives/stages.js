@@ -26,4 +26,20 @@ angular.module('qff.directives')
     },
     templateUrl: 'templates/directives/stage.checkin.html'
   };
-});
+})
+.directive('transfer', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: {
+      'airport': '=airport',
+      'airportname': '=airportname',
+      'gate': '=gate',
+      'terminal': '=terminal',
+      'type': '=type'
+    },
+    templateUrl: 'templates/directives/stage.transfer.html'
+  };
+})
+
+;

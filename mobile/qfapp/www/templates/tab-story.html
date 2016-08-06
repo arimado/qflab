@@ -41,6 +41,18 @@
 
     <preflight id='stage-1' days=2 airport="'sydney'" destination="'usa'" tasks='tasks' share='share()'></preflight>
 
+
+    <a id="1"></a>
     <checkin id='stage-2' airport="'syd'" airportname="'Sydney Kingsford Smith (International)'" terminal="'1'" gate="'J12'"></checkin>
+
+
+    <a id="2"></a>
+    <transfer
+        type="'International'"
+        airport="'usa'"
+        airportname="'LAX (International)'"
+        terminal="'2'"
+        gate="'B17'">
+    </transfer>
   </ion-content>
 </ion-view>
