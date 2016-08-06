@@ -32,7 +32,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -46,6 +46,16 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('stage.preflight', {
+    url: '/preflight',
+    views: {
+      'story': {
+        templateUrl: 'templates/story.html',
+        controller: 'AccountCtrl'
       }
     }
   })
@@ -65,21 +75,13 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/story.html',
+        templateUrl: 'templates/tab-dash.html',
         controller: 'ChatsCtrl'
       }
     }
   })
 
-  .state('stage.preflight', {
-    url: '/preflight',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  })
+
   ;
 
   // if none of the above states are matched, use this as the fallback
