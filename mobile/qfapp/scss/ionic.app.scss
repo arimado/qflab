@@ -25,16 +25,8 @@ $calm: #EE0000 !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
-
-ion-card.adv-map p {
-  font-size: 0.7em !important;
-}
-
-button[fab].fab-map {
-  top: calc(100% - 35px);
-  z-index: 50;
-}
-
+$font-family-base: "BrauerNeueRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+ 
 .item-bold {
   font-weight: bold;
 }
@@ -43,6 +35,51 @@ ion-content.cards-bg {
   background-color: #f4f4f7;
 }
 
-ion-content {
-  background-color: #323523;
+p, div,  span {
+  font-family: 'BrauerNeueRegular'
+}
+h1, h2 {
+    font-family: 'BrauerNeueBold'
+}
+/* Brauer Neue Regular */
+
+@font-face {
+    font-family: 'BrauerNeueRegular';
+    src: url('../fonts/lineto-brauer-neue-regular.eot');
+    src: url('../fonts/lineto-brauer-neue-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lineto-brauer-neue-regular.woff') format('woff'), url('../fonts/lineto-brauer-neue-regular.ttf') format('truetype'), url('../fonts/lineto-brauer-neue-regular.svg#BrauerNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Brauer Neue Bold */
+
+@font-face {
+    font-family: 'BrauerNeueBold';
+    src: url('../fonts/lineto-brauer-neue-bold.eot');
+    src: url('../fonts/lineto-brauer-neue-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/lineto-brauer-neue-bold.woff') format('woff'), url('../fonts/lineto-brauer-neue-bold.ttf') format('truetype'), url('../fonts/lineto-brauer-neue-bold.svg#BrauerNeueBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.onBoardView .scroll {
+    height: 100%;
+}
+
+.onBoard {
+    height: 100%;
+}
+
+.onBoardView ion-content {
+    flex-direction: column;
+}
+
+.onBoardView ion-slide {
+    flex: 1;
+    display: flex;
+}
+
+.top-nav .item{
+  width: 90%;
+  border: none;
 }
