@@ -59,15 +59,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+    
 
   .state('tab.account', {
     url: '/account',
