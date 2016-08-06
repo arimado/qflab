@@ -10,6 +10,7 @@
     <button class="button button-clear button-light" ng-click='scrollTo("stage-{{stage.id}}")' ng-show="!stage.completed && !stage.current">
     <i class="icon ion-android-radio-button-off"></i>
     </button>
+
   </div>
 
 
@@ -18,6 +19,7 @@
         <i class="icon ion-ios-chatboxes"></i>
       </button>
   </div>
+
 
 
 </div>
@@ -53,7 +55,10 @@
             gate="'B17'",
             tasks='tasks[stage.airport]',
             ideas='ideas[stage.airport]',
-            completed="stage.completed">
+            completed="stage.completed",
+            deptime='stage.deptime'
+            arrtime='stage.arrtime'
+            traveltime='stage.traveltime'>
         </transfer>
         </div>
         <div ng-switch-when="flight">
