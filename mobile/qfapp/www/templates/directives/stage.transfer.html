@@ -1,6 +1,6 @@
 <div class='card'>
-  <div class="item item-divider row">
-    <div class="col item-icon-left">
+  <div class="item item-divider positive row">
+    <div class="item-icon-left">
       <i class="icon ion-arrow-swap"></i>
     </div>
     <div class="col col-50">
@@ -12,10 +12,13 @@
     </div>
   </div>
   
-  <div style="position: relative">
-      <img src="img/{{airport}}.jpeg" width=100%>
+  <div class='item item-image'>
+    <div back-img="img/{{airport}}.jpeg" style='min-height:200px' width='100%'>
+      <div class='weather'><i class='icon ion-android-cloud-outline'></i>  +20 &deg;C</div>
+      <div class='city'>{{location}}</div>
+      
     </div>
-
+  </div>
   <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
 
         <div class="list card">
