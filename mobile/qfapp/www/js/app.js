@@ -50,12 +50,12 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
     }
   })
 
-  .state('stage.preflight', {
-    url: '/preflight',
+  .state('tab.story', {
+    url: '/story',
     views: {
-      'story': {
-        templateUrl: 'templates/story.html',
-        controller: 'AccountCtrl'
+      'tab-story': {
+        templateUrl: 'templates/tab-story.html',
+        controller: 'StoryCtrl'
       }
     }
   })
