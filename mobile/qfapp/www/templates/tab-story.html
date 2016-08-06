@@ -1,20 +1,11 @@
 <div class="bar bar-header top-nav">
   <!-- todo bind to stages -->
-  <button class="button button-clear button-positive" ng-click='scrollTo("stage-1")'>
-    <i class="icon ion-record"></i>
-  </button>
-  <button class="button button-clear button-positive" ng-click='scrollTo("stage-2")'>
-    <a href="#1"><i class="icon ion-record"></i></a>
+  <div ng-repeat="stage in stages">
+    <button class="button button-clear button-positive" ng-click='scrollTo("stage-{{stage.id}}")'>
+      <i class="icon ion-record"></i>
     </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
-    </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
-    </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
-    </button>
+  </div>
+
   <button class="button button-clear button-positive">
     <i class="icon ion-pinpoint"></i>
     </button>
@@ -39,22 +30,25 @@
       </div>
     </div>
 
-    <preflight id='stage-1' days=2 airport="'sydney'" destination="'usa'" tasks='tasks' share='share()'></preflight>
-
-
-    <a id="1"></a>
-    <checkin id='stage-2' airport="'syd'" airportname="'Sydney Kingsford Smith (International)'" terminal="'1'" gate="'J12'"></checkin>
-
-
-    <a id="2"></a>
-    <transfer
-        type="'International'"
-        airport="'usa'"
-        airportname="'LAX (International)'"
-        terminal="'2'"
-        gate="'B17'">
-    </transfer>
-
+    <div ng-repeat="stage in stages">
+      <div ng-switch="stage.type">
+        <div ng-switch-when="preflight">
+          <preflight  id='stage-{{stage.id}}' days='stage.days' airport="stage.airport" destination="stage.destination" tasks='tasks' share='share()' location="stage.location"></preflight>
+        </div>
+        <div ng-switch-when="checkin">
+              <checkin id='stage-{{stage.id}}' airport="stage.airport" airportname="stage.airportname" terminal="stage.terminal" gate="stage.gate"></checkin>
+        </div>
+        <div ng-switch-when="transfer">
+          <transfer id='stage-{{stage.id}}'
+            type="stage.transfertype"
+            airport="stage.airport"
+            airportname="stage.airportname"
+            terminal="stage.terminal"
+            gate="'B17'">
+        </transfer>
+        </div>
+      </div>
+    </div>
 
   </ion-content>
 </ion-view>

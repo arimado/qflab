@@ -9,6 +9,7 @@ angular.module('qff.directives')
       'destination': '=destination',
       'airport': '=airport',
       'tasks': '=tasks',
+      'location': '=location',
       'share': '&share'
     },
     templateUrl: 'templates/directives/stage.preflight.html'
@@ -39,6 +40,7 @@ angular.module('qff.directives')
       'type': '=type'
     },
     templateUrl: 'templates/directives/stage.transfer.html',
+
     controller: function ($scope) {
         var timer = {
             minutes: 47,

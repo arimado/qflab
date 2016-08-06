@@ -1,4 +1,4 @@
-angular.module('qff.services', [])
+angular.module('qff.services')
 
 .factory('todo', function() {
   // Might use a resource here that returns a JSON array
