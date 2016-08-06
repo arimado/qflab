@@ -19,9 +19,9 @@
   <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
 
         <div class="list card">
-          <a class="item item-icon-left" ng-repeat='idea in ideas'>
-            <i class="icon {{idea.icon}}"></i>
-            {{idea.text}}
+          <a class="item item-icon-left" ng-repeat='task in tasks'>
+            <i class="icon {{task.icon}}"></i>
+            {{task.text}}
           </a>
         </div>
         <div class=>
@@ -32,6 +32,15 @@
             <p> to get to gate B17 </p>
           </a>
       </div>
+        
+      <h2>If you have some time, why not make the most of your time in {{airportname}} after all this is your first time there!</h2>
+
+    <div class="list card">
+      <a class="item item-icon-left" ng-repeat='idea in ideas'>
+        <i class="icon {{idea.icon}}"></i>
+        {{idea.text}}
+      </a>
+    </div>
 
   </div>
     <div class="item item-divider" ng-show="!completed_toggle">

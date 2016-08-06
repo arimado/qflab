@@ -9859,3 +9859,14 @@ h1, h2, h3, h4 {
 .top-nav .item {
   width: 90%;
   border: none; }
+
+.weather {
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+  padding-top: 20px; }
+
+.city {
+  color: white;
+  font-size: xx-large;
+  padding-top: 15px; }

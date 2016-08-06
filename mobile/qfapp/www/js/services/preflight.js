@@ -80,9 +80,9 @@ angular.module('qff.services')
         }
     }
 })
-.factory('ideas', function() {
-    var ideas= [];
-    ideas.lax = [
+.factory('tasks', function() {
+    var tasks= [];
+    tasks.lax = [
         {
             icon: "ion-ios-home",
             text: "Collect your luggage from carousel 3"
@@ -103,7 +103,33 @@ angular.module('qff.services')
             icon: "ion-ios-telephone",
             text: "Go to gate B17"
         },
-    ]
+    ];
+
+    return {
+        all: function() {
+            return tasks;
+        }
+    }
+})
+.factory('ideas', function() {
+    var ideas= [];
+    ideas.lax = [
+        {
+            icon: "ion-ios-wineglass",
+            text: "Your Qantas FF get's you access to the American Airlines Admirals Club in Terminal 4"
+        },
+    ];
+    ideas.preflight = [
+      {
+        icon: 'ion-happy-outline',
+        text: 'You\'ve got some big flights ahead, why don\'t you do some pre-flight exercise?'
+      },
+      {
+        icon: 'ion-earth',
+        text: 'You only have 1h45m to transfer at LA, why don\'t you consider getting a later transfer and checking out some of the sights in Los Angeles?',
+        link: 'http://travelinsider.qantas.com.au/north-america/usa/los-angeles'
+      }
+    ];
     return {
         all: function() {
             return ideas;

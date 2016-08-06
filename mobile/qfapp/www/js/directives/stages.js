@@ -9,6 +9,7 @@ angular.module('qff.directives')
       'destination': '=destination',
       'airport': '=airport',
       'tasks': '=tasks',
+      'ideas': '=ideas',
       'location': '=location',
       'share': '&share',
       'completed': '=completed'
@@ -43,7 +44,8 @@ angular.module('qff.directives')
       'location': '=location',
       'type': '=type',
       'completed': '=completed',
-      'ideas': '=ideas'
+      'ideas': '=ideas',
+      'tasks': '=tasks'
     },
     templateUrl: 'templates/directives/stage.transfer.html',
 
@@ -68,5 +70,14 @@ angular.module('qff.directives')
     }
   };
 })
-
+.directive('backImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')',
+            'background-size' : 'cover',
+            'background-repeat': 'no-repeat'
+        });
+    };
+})
 ;
