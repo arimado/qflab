@@ -60,8 +60,6 @@
 #bottomContainer {
     border: 1px solid red;
 }
-
-
 /* DASH STYLES */
 
 
@@ -70,7 +68,7 @@
 }
 
 .onBoardView .box.ob1 h1 {
-    margin-top: 50%;
+    margin-top: 120%;
 }
 
 
@@ -99,4 +97,9 @@
 
 .onBoardContent p {
     font-size: 20px; line-height: 1.5em;
+}
+
+#entryCTA {
+    margin-top: 125%;
+    margin-left: 25%;
 }
