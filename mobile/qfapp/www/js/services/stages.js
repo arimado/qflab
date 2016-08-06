@@ -4,7 +4,8 @@ angular.module('qff.services')
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var stages = [{
+  var stages = [];
+  stages['ant'] = [{
     id: 0,
     type: 'preflight',
     days: 2,
@@ -31,8 +32,35 @@ angular.module('qff.services')
   }
   ];
 
+  stages['jeremy'] = [{
+    id: 0,
+    type: 'preflight',
+    days: 2,
+    airport: 'sydney',
+    destination: 'usa',
+    location: 'Sydney, NSW'
+  },
+  {
+    id: 1,
+    type: 'checkin',
+    airport: 'syd',
+    airportname: 'Sydney Kingsford Smith (International)',
+    terminal: '1',
+    gate: 'J16'
+    },
+  {
+    id: 2,
+    type: 'transfer',
+    transfertype: 'International',
+    airport: 'usa',
+    airportname: 'LAX (International)',
+    terminal: '2',
+    gate: 'A56'
+  }
+  ];
+  
   return {
-    all: function() {
-      return stages;
+    all: function(person) {
+      return stages[person];
     }
   }});

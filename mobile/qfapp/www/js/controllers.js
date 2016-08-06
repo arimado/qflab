@@ -9,8 +9,8 @@ angular.module('qff.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
-  $scope.stages = stages.all();
+  $scope.person = 'ant';
+  $scope.stages = stages.all($scope.person);
 
   $scope.tasks = todo.all();
   $scope.questions = question.all();
@@ -26,7 +26,11 @@ angular.module('qff.controllers', [])
   };
   $scope.share = function() {
 
-
+  $scope.change = function(){
+    alert('boooo');
+    $scope.stages = stages.all($scope.person);
+    $scope.$apply();
+  };
 
 
    // Show the action sheet
