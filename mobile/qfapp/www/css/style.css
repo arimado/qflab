@@ -1,5 +1,15 @@
 /* Empty. Add your own CSS if you like */
 
+/* MENU STYLES */
+
+#chatIconContainer {
+    padding: 0 10px 0px 10px;
+}
+
+#chatIconContainer i {
+    color: white;
+}
+
 /* TAB STYLES */
 
 .tabs .tab-item .icon.qf-joey {
