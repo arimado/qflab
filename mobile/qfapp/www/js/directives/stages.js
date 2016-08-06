@@ -68,15 +68,15 @@ angular.module('qff.directives')
     }
   };
 })
-.directive('timer', function() {
+.directive('chat', function() {
     return {
         restrict: 'E',
         transclude: true,
         scope: {
             initMins: '=mins',
-            initSeconds: '=',
-
+            initSeconds: '=Seconds',
         }
-    }
+    },
+    templateUrl: 'templates/directives/chat.html',
 })
 ;

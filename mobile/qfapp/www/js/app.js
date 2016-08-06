@@ -61,10 +61,10 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
 })
 
   .state('tab.chats', {
-      url: '/chats',
+      url: '/chat',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
+        'tab-chat': {
+          templateUrl: 'templates/tab-chat.html',
           controller: 'ChatsCtrl'
         }
       }
