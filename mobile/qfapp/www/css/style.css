@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+
+
+
+.onBoard {
+    height: 100%;
+}
+
+ion-content {
+    flex-direction: column;
+}
+
+ion-slide {
+    background: red;
+    flex: 1;
+    display: flex;
+}
