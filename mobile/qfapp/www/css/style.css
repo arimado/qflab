@@ -1,15 +1,6 @@
 /* Empty. Add your own CSS if you like */
 
-
-
-#actionButton {
-    position: absolute;
-}
-
-.onBoardContent img {
-    margin-top: 50%;
-}
-
+/* TAB STYLES */
 
 .tabs .tab-item .icon.qf-joey {
   background-repeat: no-repeat;
@@ -54,4 +45,37 @@
   background-size:contain;
   margin-top: 20px;
 
+}
+
+#bottomContainer {
+    border: 1px solid red;
+}
+
+
+/* DASH STYLES */
+
+
+#actionButton {
+    position: absolute;
+}
+
+.onBoardContent img {
+    margin-top: 50%;
+}
+
+
+.onBoardView .box {
+    background-image: url(https://hd.unsplash.com/photo-1450887169825-67cbce827da4);
+    background-size: cover;
+    background-position: right;
+    padding: 20px;
+    color: white;
+}
+
+.onBoardContent h1 {
+    color: white;
+}
+
+.onBoardContent p {
+    font-size: 20px; line-height: 1.5em;
 }
