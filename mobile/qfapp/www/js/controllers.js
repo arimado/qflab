@@ -24,23 +24,7 @@ angular.module('qff.controllers', [])
   };
   $scope.share = function() {
 
-    // Transfer Card functions
 
-    var timer = {
-        minutes: 47,
-        seconds: 32
-    }
-
-    setTimeout(function(){
-        if (timer.seconds > 0) {
-            timer.seconds -= 1;
-        } else {
-            timer.minutes -= 1;
-            timer.seconds = 60;
-        }
-    }, 1000)
-
-    $scope.timer = timer;
 
 
    // Show the action sheet
