@@ -66,7 +66,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
     views: {
       'tab-account': {
         templateUrl: 'templates/story.html',
-        controller: 'AccountCtrl'
+        controller: 'ChatsCtrl'
       }
     }
   })
@@ -86,3 +86,4 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+angular.module('qff.directives', []);

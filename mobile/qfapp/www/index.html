@@ -24,26 +24,14 @@
     <script src="js/services.js"></script>
     <script src="js/services/preflight.js"></script>
     <script src="js/directives/todo.js"></script>
+    <script src="js/directives/stages.js"></script>
   </head>
   <body ng-app="qff">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
     <ion-nav-bar class="bar-stable">
-      <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" danger>
-        <ion-icon range-left small danger name="thermometer"></ion-icon>
-        <ion-icon range-right danger name="thermometer"></ion-icon>
-      </ion-range>
-      <ion-view>
-        <ion-nav-buttons side="primary">
-          <button class="button" ng-click="doSomething()">
-            I'm a button on the primary of the navbar!
-          </button>
-        </ion-nav-buttons>
-        <ion-content>
-          Some super content here!
-        </ion-content>
-      </ion-view>
+
       <ion-nav-back-button>
       </ion-nav-back-button>
     </ion-nav-bar>
