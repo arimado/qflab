@@ -18,12 +18,16 @@ angular.module('qff.controllers', [])
   $scope.remove = function(task) {
     todo.remove(task);
   };
+
   $scope.scrollTo = function (id) {
       $location.hash(id);
       var delegateHandle = $ionicScrollDelegate.$getByHandle('storyView');
       delegateHandle.anchorScroll(id);
-   };
+  };
   $scope.share = function() {
+
+
+
 
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({

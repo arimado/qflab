@@ -40,6 +40,24 @@ angular.module('qff.directives')
       'type': '=type'
     },
     templateUrl: 'templates/directives/stage.transfer.html',
+
+    controller: function ($scope) {
+        var timer = {
+            minutes: 47,
+            seconds: 32
+        }
+        setInterval(function(){
+            if (timer.seconds > 0) {
+                timer.seconds -= 1;
+            } else {
+                timer.minutes -= 1;
+                timer.seconds = 60;
+            }
+        
+            console.log(timer);
+        }, 1000)
+        $scope.timer = timer;
+    }
   };
 })
 

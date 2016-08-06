@@ -1,20 +1,11 @@
 <div class="bar bar-header top-nav">
   <!-- todo bind to stages -->
-  <button class="button button-clear button-positive" ng-click='scrollTo("stage-1")'>
-    <i class="icon ion-record"></i>
-  </button>
-  <button class="button button-clear button-positive" ng-click='scrollTo("stage-2")'>
-    <a href="#1"><i class="icon ion-record"></i></a>
+  <div ng-repeat="stage in stages">
+    <button class="button button-clear button-positive" ng-click='scrollTo("stage-{{stage.id}}")'>
+      <i class="icon ion-record"></i>
     </button>
-  <button class="button button-clear button-positive" ng-click='scrollTo("stage-3")'>
-    <i class="icon ion-record"></i>
-    </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
-    </button>
-  <button class="button button-clear button-positive">
-    <i class="icon ion-record"></i>
-    </button>
+  </div>
+
   <button class="button button-clear button-positive">
     <i class="icon ion-pinpoint"></i>
     </button>
@@ -39,10 +30,6 @@
       </div>
     </div>
 
-    
-
-    
-    
     <div ng-repeat="stage in stages">
       <div ng-switch="stage.type">
         <div ng-switch-when="preflight">
@@ -62,5 +49,6 @@
         </div>
       </div>
     </div>
+
   </ion-content>
 </ion-view>
