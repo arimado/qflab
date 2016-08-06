@@ -1,18 +1,22 @@
 /* Empty. Add your own CSS if you like */
 
 
+.onBoardView .scroll {
+    height: 100%;
+}
 
 .onBoard {
     height: 100%;
     background: blue;
 }
 
-ion-content {
+.onBoardView ion-content {
     flex-direction: column;
 }
 
-ion-slide {
-    background: red;
+.onBoardView ion-slide {
+    background: grey;
     flex: 1;
     display: flex;
+
 }
