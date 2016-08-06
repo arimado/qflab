@@ -75,8 +75,8 @@ angular.module('qff.directives')
         scope: {
             initMins: '=mins',
             initSeconds: '=Seconds',
-        }
-    },
+        },
     templateUrl: 'templates/directives/chat.html',
+    }
 })
 ;
