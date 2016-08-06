@@ -11,29 +11,23 @@
             </p>
           </div>
     </div>
-
-
-
-
-    <button class="button button-block button-positive col col-75 col-offset-25" style="text-align: right; padding-right: 10px; line-height: 1.5em;">
-
-        Hi Bobby, I've been waiting for my luggage for over an hour!
-    </button>
-    <button class="button button-block button-stable col-75" style="text-align: left; padding-left: 10px; line-height: 1.5em;">
-      It should be there. Let me check the database.
-    </button>
-
-
-
+    <div ng-repeat="message in messages">
+      <div ng-switch="message.type">
+      <button ng-switch-when='user' class="button button-block button-positive col col-75 col-offset-25" style="text-align: right; padding-right: 10px; line-height: 1.5em;">
+         {{message.text}}
+      </button>
+      <button ng-switch-when="operator" class="button button-block button-stable col-75" style="text-align: left; padding-left: 10px; line-height: 1.5em;">
+        {{message.text}}
+      </button>
+      </div>
+    </div>
      </ion-content>
-
-
 
      <ion-footer-bar keyboard-attach class="item-input-inset">
     <label class="item-input-wrapper">
-          <input type="text" placeholder="Type your message"/>
+          <input type="text" placeholder="Type your message" ng-model="text"/>
     </label>
-    <button class="button button-stable"> Send </button>
+    <button class="button button-stable" ng-click="sendMessage()"> Send </button>
     </ion-footer-bar>
 
 </ion-view>

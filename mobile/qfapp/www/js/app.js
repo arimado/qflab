@@ -60,7 +60,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
     }
 })
 
-  .state('tab.chats', {
+  .state('tab.chat', {
       url: '/chat',
       views: {
         'tab-chat': {
