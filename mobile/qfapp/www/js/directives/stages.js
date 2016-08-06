@@ -8,7 +8,8 @@ angular.module('qff.directives')
       'days': '=days',
       'destination': '=destination',
       'airport': '=airport',
-      'tasks': '=tasks'
+      'tasks': '=tasks',
+      'share': '&share'
     },
     templateUrl: 'templates/directives/stage.preflight.html'
   };
