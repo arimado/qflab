@@ -25,12 +25,18 @@ angular.module('qff.controllers', [])
       var delegateHandle = $ionicScrollDelegate.$getByHandle('storyView');
       delegateHandle.anchorScroll(id);
   };
+
   $scope.share = function() {
 
   $scope.change = function(){
     $scope.stages = stages.all($scope.person);
     $scope.$apply();
   };
+
+  $scope.navigateTo = function (path) {
+      console.log('navigate')
+      $location.path( path );
+  }
 
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({

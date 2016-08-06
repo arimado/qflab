@@ -69,17 +69,29 @@
     position: absolute;
 }
 
-.onBoardContent img {
+.onBoardView .box.ob1 h1 {
     margin-top: 50%;
 }
 
 
 .onBoardView .box {
-    background-image: url(https://hd.unsplash.com/photo-1450887169825-67cbce827da4);
+
     background-size: cover;
-    background-position: right;
+    background-position: top;
     padding: 20px;
     color: white;
+}
+
+.onBoardView .box.ob1 {
+    background-image: url(/img/1-dash.jpeg);
+}
+
+.onBoardView .box.ob2 {
+    background-image: url(/img/2-dash.jpeg);
+}
+
+.onBoardView .box.ob3 {
+    background-image: url(/img/3-dash.jpeg);
 }
 
 .onBoardContent h1 {
