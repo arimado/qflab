@@ -33,10 +33,36 @@ angular.module('qff.services')
     location: 'South LA, USA',
     terminal: '2',
     gate: 'A56',
+    current: true,
     completed: false
   },
   {
     id: 3,
+    type: 'checkin',
+    airport: 'lax',
+    airportname: 'LAX',
+    location: 'South LA, USA',
+    terminal: '4',
+    gate: 'J16',
+    completed: false,
+    },
+     {
+    id: 4,
+    type: 'flight',
+    airport: 'lax',
+    airportname: 'LAX',
+    dest: 'sfo',
+    destination: 'San Francisco, USA',
+    location: 'San Francisco, USA',
+    deptime: '10:55 AM',
+    arrtime: '13:45 PM',
+    traveltime: '2h50m',
+    terminal: '4',
+    gate: 'J16',
+    completed: false,
+    },
+  {
+    id: 5,
     type: 'holiday',
     transfertype: 'International',
     airport: 'lax',
@@ -48,7 +74,6 @@ angular.module('qff.services')
   }
   ];
 
-  
   return {
     all: function(person) {
       return stages[person];

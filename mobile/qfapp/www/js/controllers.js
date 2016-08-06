@@ -32,7 +32,6 @@ angular.module('qff.controllers', [])
     $scope.$apply();
   };
 
-
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({
      buttons: [

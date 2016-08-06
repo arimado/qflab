@@ -84,23 +84,23 @@ angular.module('qff.services')
     var tasks= [];
     tasks.lax = [
         {
-            icon: "ion-ios-home",
+            icon: "fa fa-suitcase",
             text: "Collect your luggage from carousel 3"
         },
         {
-            icon: "ion-ios-home",
+            icon: "fa fa-suitcase",
             text: "Go back through immigration and customs, put your baggage in the transfer area"
         },
         {
-            icon: "ion-ios-home",
+            icon: "fa fa-bus",
             text: "Walk to terminal 3, or get the free shuttle bus"
         },
         {
-            icon: "ion-ios-telephone",
+            icon: "fa fa-ticket",
             text: "Go through Domestic departures"
         },
         {
-            icon: "ion-ios-telephone",
+            icon: "fa fa-plane",
             text: "Go to gate B17"
         },
     ];
@@ -118,6 +118,16 @@ angular.module('qff.services')
             icon: "ion-ios-wineglass",
             text: "Your Qantas FF get's you access to the American Airlines Admirals Club in Terminal 4"
         },
+    ];
+    ideas.syd = [
+        {
+            icon: "ion-ios-wineglass",
+            text: "Your Qantas FF get's you access to the Qantas Club near the duty free"
+        },
+        {
+            icon: 'ion-android-restaurant',
+            text: 'If you fancy something different for lunch, Qantas Platinum members get 20% off at the bank st. diner'
+        }
     ];
     ideas.preflight = [
       {

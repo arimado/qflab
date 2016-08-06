@@ -1,6 +1,6 @@
 <div class='card'>
   <div class="item item-divider row">
-    <div class="col item-icon-left">
+    <div class="item-icon-left">
       <i class="icon ion-compose"></i>
     </div>
     <div class="col col-50">
@@ -12,9 +12,13 @@
     </div>
   </div>
   
-  <div style="position: relative">
-      <img src="img/{{airport}}.jpeg" width=100%>
+<div class='item item-image'>
+    <div back-img="img/{{airport}}.jpeg" style='min-height:200px' width='100%'>
+      <div class='weather'><i class='icon ion-android-cloud-outline'></i>  +20 &deg;C</div>
+      <div class='city'>{{location}}</div>
+      
     </div>
+  </div>
   
   <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
     
@@ -24,6 +28,13 @@
     <h1>Go to terminal {{terminal}} and check in at {{gate}}</h2>
 
     <h2>Looks like you've got {{hours}} hours before your flight</h2>
+    
+    <div class="list card">
+      <a class="item item-icon-left" ng-repeat='idea in ideas' href="{{idea.link}}">
+        <i class="icon {{idea.icon}}"></i>
+        {{idea.text}}
+      </a>
+    </div>
   </div>
     <div class="item item-divider" ng-show="!completed_toggle">
    <button class="button icon ion-ios-arrow-down" ng-click="completed_toggle = !completed_toggle"></button>
