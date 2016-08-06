@@ -24,7 +24,7 @@ angular.module('qff.services', [])
     link: 'http://uk.embassy.gov.au/lhlh/immi_travel.html',
     completed: false,
     icon: 'fa-'
-  }];
+}];
 
   return {
     all: function() {
