@@ -8,16 +8,13 @@
       <span> <i class="icon ion-location"></i> {{location}} </span>
     </div>
     <div class="col item-icon-right">
-      <i class="icon pull-right ion-android-done"></i>  
+      <i ng-show='completed' class="icon pull-right ion-android-done"></i>  
     </div>
-    
-    
-    
   </div>
   <div style="position: relative">
       <img src="img/{{airport}}.jpeg" width=100%>
     </div>
-  <div class="item item-text-wrap" ng-show="completed">
+  <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
     
     <p>
       {{days}} days until you fly to {{destination}}!
@@ -27,11 +24,13 @@
     <todo data="tasks"></todo>
 
   </div>
-  <div class="item item-divider" ng-show="completed">
-   <button class="button icon ion-ios-arrow-up" ng-click="completed = !completed"></button>
-    <button class="button icon ion-share" ng-click="share()"></button>
+  <div class="item item-divider" ng-show="!completed_toggle">
+   <button class="button icon ion-ios-arrow-down" ng-click="completed_toggle = !completed_toggle"></button>
+    
   </div>
- <div class="item item-divider" ng-show="!completed">
-    <button class="button icon ion-ios-arrow-down" ng-click="completed = !completed"></button>
+ <div class="item item-divider" ng-show="completed_toggle">
+    <button class="button icon ion-ios-arrow-up" ng-click="completed_toggle = !completed_toggle"></button>
+    
+    <button class="button icon ion-share" ng-click="share()"></button>
   </div>
 </div>

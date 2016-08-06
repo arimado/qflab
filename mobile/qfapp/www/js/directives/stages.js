@@ -10,7 +10,8 @@ angular.module('qff.directives')
       'airport': '=airport',
       'tasks': '=tasks',
       'location': '=location',
-      'share': '&share'
+      'share': '&share',
+      'completed': '=completed'
     },
     templateUrl: 'templates/directives/stage.preflight.html'
   };
@@ -23,7 +24,9 @@ angular.module('qff.directives')
       'airport': '=airport',
       'airportname': '=airportname',
       'gate': '=gate',
-      'terminal': '=terminal'
+      'location': '=location',
+      'terminal': '=terminal',
+      'completed': '=completed'
     },
     templateUrl: 'templates/directives/stage.checkin.html'
   };
@@ -37,7 +40,10 @@ angular.module('qff.directives')
       'airportname': '=airportname',
       'gate': '=gate',
       'terminal': '=terminal',
-      'type': '=type'
+      'location': '=location',
+      'type': '=type',
+      'completed': '=completed',
+      'ideas': '=ideas'
     },
     templateUrl: 'templates/directives/stage.transfer.html',
 

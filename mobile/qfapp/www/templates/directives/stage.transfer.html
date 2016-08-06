@@ -1,45 +1,40 @@
 <div class='card'>
-  <div class="item item-divider">
-    {{ type }} Transfer at {{airport | uppercase}}
+  <div class="item item-divider row">
+    <div class="col item-icon-left">
+      <i class="icon ion-arrow-swap"></i>
+    </div>
+    <div class="col col-50">
+      <h3>{{ type }} Transfer at {{airport | uppercase}}</h3>
+      <span> <i class="icon ion-location"></i> {{location}} </span>
+    </div>
+    <div class="col item-icon-right">
+      <i ng-show='completed' class="icon pull-right ion-android-done"></i>  
+    </div>
   </div>
+  
   <div style="position: relative">
       <img src="img/{{airport}}.jpeg" width=100%>
     </div>
   
-  <div class="item item-text-wrap">
+  <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
     
-
     <h1></h2>
-
         <div class="list card">
-          <a class="item item-icon-left">
-            <i class="icon ion-home"></i>
-            1. Check out of LAX international airport
-          </a>
-
-          <a class="item item-icon-left">
-            <i class="icon ion-ios-telephone"></i>
-            2. Go through Domestic departures
-          </a>
-
-          <a class="item item-icon-left">
-            <i class="icon ion-wifi"></i>
-            2. Go to gate B17
-          </a>
-
-          <a class="item item-icon-left">
-            <i class="icon ion-wifi"></i>
-            You have {{timer.minutes}} {{test}} minutes and {{timer.seconds}} left
-
+          <a class="item item-icon-left" ng-repeat='idea in ideas'>
+            <i class="icon {{idea.icon}}"></i>
+            {{idea.text}}
           </a>
         </div>
 
-
   </div>
-  <div class="item item-divider">
-    <a class="button icon-right ion-chevron-right button-calm">Learn More</a>
-
-    <button class="button icon ion-share" ng-click="share"></button>
+    <div class="item item-divider" ng-show="!completed_toggle">
+   <button class="button icon ion-ios-arrow-down" ng-click="completed_toggle = !completed_toggle"></button>
+    
+  </div>
+ <div class="item item-divider" ng-show="completed_toggle">
+    <button class="button icon ion-ios-arrow-up" ng-click="completed_toggle = !completed_toggle"></button>
+    
+    <button class="button icon ion-share" ng-click="share()"></button>
   </div>
 
 </div>

@@ -33,18 +33,21 @@
     <div ng-repeat="stage in stages">
       <div ng-switch="stage.type">
         <div ng-switch-when="preflight">
-          <preflight  id='stage-{{stage.id}}' days='stage.days' airport="stage.airport" destination="stage.destination" tasks='tasks' share='share()' location="stage.location"></preflight>
+          <preflight  id='stage-{{stage.id}}' days='stage.days' airport="stage.airport" destination="stage.destination" tasks='tasks' share='share()' location="stage.location" completed="stage.completed"></preflight>
         </div>
         <div ng-switch-when="checkin">
-              <checkin id='stage-{{stage.id}}' airport="stage.airport" airportname="stage.airportname" terminal="stage.terminal" gate="stage.gate"></checkin>
+              <checkin id='stage-{{stage.id}}' airport="stage.airport" airportname="stage.airportname" terminal="stage.terminal" gate="stage.gate" location="stage.location"  completed="stage.completed"></checkin>
         </div>
         <div ng-switch-when="transfer">
           <transfer id='stage-{{stage.id}}'
             type="stage.transfertype"
             airport="stage.airport"
             airportname="stage.airportname"
+             location="stage.location" 
             terminal="stage.terminal"
-            gate="'B17'">
+            gate="'B17'",
+            ideas='ideas.lax'
+            completed="stage.completed">
         </transfer>
         </div>
       </div>

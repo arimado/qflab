@@ -56,12 +56,12 @@ angular.module('qff.services')
             answer: "It's always in the last place you look!"
         },
         {
-            id: 0,
+            id: 1,
             question: "Where is the gate?",
             answer: "It's always in the last place you look!"
         },
         {
-            id: 0,
+            id: 2,
             question: "I'm all out of love.",
             answer: "It's always in the last place you look!"
         },
@@ -77,6 +77,36 @@ angular.module('qff.services')
             }
           }
           return null;
+        }
+    }
+})
+.factory('ideas', function() {
+    var ideas= [];
+    ideas.lax = [
+        {
+            icon: "ion-ios-home",
+            text: "Collect your luggage from carousel 3"
+        },
+        {
+            icon: "ion-ios-home",
+            text: "Go back through immigration and customs, put your baggage in the transfer area"
+        },
+        {
+            icon: "ion-ios-home",
+            text: "Walk to terminal 3, or get the free shuttle bus"
+        },
+        {
+            icon: "ion-ios-telephone",
+            text: "Go through Domestic departures"
+        },
+        {
+            icon: "ion-ios-telephone",
+            text: "Go to gate B17"
+        },
+    ]
+    return {
+        all: function() {
+            return ideas;
         }
     }
 });

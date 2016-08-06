@@ -11,24 +11,29 @@ angular.module('qff.services')
     days: 2,
     airport: 'sydney',
     destination: 'usa',
-    location: 'Avoca Beach, NSW'
+    location: 'Avoca Beach, NSW',
+    completed: true,
   },
   {
     id: 1,
     type: 'checkin',
     airport: 'syd',
     airportname: 'Sydney Kingsford Smith (International)',
+    location: 'Airport drive, Mascot, NSW',
     terminal: '1',
-    gate: 'J16'
+    gate: 'J16',
+    completed: true,
     },
   {
     id: 2,
     type: 'transfer',
     transfertype: 'International',
-    airport: 'usa',
+    airport: 'lax',
     airportname: 'LAX (International)',
+    location: 'South LA, USA',
     terminal: '2',
-    gate: 'A56'
+    gate: 'A56',
+    completed: false
   }
   ];
 
