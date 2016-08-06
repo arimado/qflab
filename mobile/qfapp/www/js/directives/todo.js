@@ -1,4 +1,4 @@
-angular.module('qff.directives', [])
+angular.module('qff.directives')
 
 .directive('todo', function() {
   return {
@@ -9,4 +9,4 @@ angular.module('qff.directives', [])
     },
     templateUrl: 'templates/directives/todo.html'
   };
-})
+});

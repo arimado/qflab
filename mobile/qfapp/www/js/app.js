@@ -65,7 +65,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+        templateUrl: 'templates/story.html',
         controller: 'AccountCtrl'
       }
     }
