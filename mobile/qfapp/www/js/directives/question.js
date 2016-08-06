@@ -1,13 +1,11 @@
 angular.module('qff.directives')
-
-.directive('todo', function() {
+.directive('question', function() {
   return {
     restrict: 'E',
     transclude: true,
     scope: {
       'data': '=data'
     },
-    templateUrl: 'templates/directives/todo.html'
+    templateUrl: 'templates/directives/question.html'
   };
-});
-
+})
