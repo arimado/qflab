@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>trips</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Joey" transform="translate(-103.000000, -627.000000)" fill="#888888">
+            <g id="Bottom-Bar/Tab-Bar" transform="translate(0.000000, 606.000000)">
+                <g id="trips" transform="translate(103.000000, 20.000000)">
+                    <polygon id="Shape" points="0 18.12375 5.95510204 19.988125 5.95510204 2.86041667 0 0.996041667"></polygon>
+                    <polygon id="Shape" points="14.044898 0.996041667 14.044898 18.12375 20 19.988125 20 2.86041667"></polygon>
+                    <polygon id="Shape" points="7.01632653 19.988125 12.9836735 18.12375 12.9836735 0.996041667 7.01632653 2.86041667"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
