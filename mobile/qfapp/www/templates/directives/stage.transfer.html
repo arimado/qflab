@@ -1,6 +1,6 @@
 <div class='card'>
-  <div class="item item-divider row">
-    <div class="col item-icon-left">
+  <div class="item item-divider positive row">
+    <div class="item-icon-left">
       <i class="icon ion-arrow-swap"></i>
     </div>
     <div class="col col-50">
@@ -12,16 +12,18 @@
     </div>
   </div>
 
-  <div style="position: relative">
-      <img src="img/{{airport}}.jpeg" width=100%>
+  <div class='item item-image'>
+    <div back-img="img/{{airport}}.jpeg" style='min-height:200px' width='100%'>
+      <div class='weather'><i class='icon ion-android-cloud-outline'></i>  +20 &deg;C</div>
+      <div class='city'>{{location}}</div>
     </div>
-
+  </div>
   <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
 
         <div class="list card">
-          <a class="item item-icon-left" ng-repeat='idea in ideas'>
-            <i class="icon {{idea.icon}}"></i>
-            {{idea.text}}
+          <a class="item item-icon-left" ng-repeat='task in tasks'>
+            <i class="icon {{task.icon}}"></i>
+            {{task.text}}
           </a>
         </div>
         <div>
@@ -32,6 +34,15 @@
             <p> to get to gate B17 </p>
           </a>
       </div>
+        
+      <h2>If you have some time, why not make the most of your time in {{airportname}} after all this is your first time there!</h2>
+
+    <div class="list card">
+      <a class="item item-icon-left" ng-repeat='idea in ideas'>
+        <i class="icon {{idea.icon}}"></i>
+        {{idea.text}}
+      </a>
+    </div>
 
   </div>
     <div class="item item-divider" ng-show="!completed_toggle">

@@ -33,37 +33,47 @@ angular.module('qff.services')
     location: 'South LA, USA',
     terminal: '2',
     gate: 'A56',
+    current: true,
+    completed: false
+  },
+  {
+    id: 3,
+    type: 'checkin',
+    airport: 'lax',
+    airportname: 'LAX',
+    location: 'South LA, USA',
+    terminal: '4',
+    gate: 'J16',
+    completed: false,
+    },
+     {
+    id: 4,
+    type: 'flight',
+    airport: 'lax',
+    airportname: 'LAX',
+    dest: 'sfo',
+    destination: 'San Francisco, USA',
+    location: 'San Francisco, USA',
+    deptime: '10:55 AM',
+    arrtime: '13:45 PM',
+    traveltime: '2h50m',
+    terminal: '4',
+    gate: 'J16',
+    completed: false,
+    },
+  {
+    id: 5,
+    type: 'holiday',
+    transfertype: 'International',
+    airport: 'lax',
+    airportname: 'LAX (International)',
+    location: 'South LA, USA',
+    terminal: '2',
+    gate: 'A56',
     completed: false
   }
   ];
 
-  stages['jeremy'] = [{
-    id: 0,
-    type: 'preflight',
-    days: 2,
-    airport: 'sydney',
-    destination: 'usa',
-    location: 'Sydney, NSW'
-  },
-  {
-    id: 1,
-    type: 'checkin',
-    airport: 'syd',
-    airportname: 'Sydney Kingsford Smith (International)',
-    terminal: '1',
-    gate: 'J16'
-    },
-  {
-    id: 2,
-    type: 'transfer',
-    transfertype: 'International',
-    airport: 'usa',
-    airportname: 'LAX (International)',
-    terminal: '2',
-    gate: 'A56'
-  }
-  ];
-  
   return {
     all: function(person) {
       return stages[person];

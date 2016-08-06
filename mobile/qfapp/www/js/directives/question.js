@@ -8,4 +8,4 @@ angular.module('qff.directives')
     },
     templateUrl: 'templates/directives/question.html'
   };
-})
+});

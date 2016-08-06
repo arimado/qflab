@@ -9,6 +9,7 @@ angular.module('qff.directives')
       'destination': '=destination',
       'airport': '=airport',
       'tasks': '=tasks',
+      'ideas': '=ideas',
       'location': '=location',
       'share': '&share',
       'completed': '=completed'
@@ -26,7 +27,9 @@ angular.module('qff.directives')
       'gate': '=gate',
       'location': '=location',
       'terminal': '=terminal',
-      'completed': '=completed'
+      'completed': '=completed',
+      'ideas': '=ideas',
+      'tasks': '=tasks'
     },
     templateUrl: 'templates/directives/stage.checkin.html'
   };
@@ -43,7 +46,8 @@ angular.module('qff.directives')
       'location': '=location',
       'type': '=type',
       'completed': '=completed',
-      'ideas': '=ideas'
+      'ideas': '=ideas',
+      'tasks': '=tasks'
     },
     templateUrl: 'templates/directives/stage.transfer.html',
 
@@ -68,7 +72,60 @@ angular.module('qff.directives')
     }
   };
 })
-.directive('chat', function() {
+.directive('flight', function() {
+  return {
+    restrict: 'E',
+    transclude: true,
+    scope: {
+      'airport': '=airport',
+      'airportname': '=airportname',
+      'dest': '=dest',
+      'destination': '=destination',
+      'deptime': '=deptime',
+      'arrtime': '=arrtime',
+      'traveltime': '=traveltime',
+      'gate': '=gate',
+      'terminal': '=terminal',
+      'location': '=location',
+      'type': '=type',
+      'completed': '=completed',
+      'ideas': '=ideas',
+      'tasks': '=tasks'
+    },
+    templateUrl: 'templates/directives/stage.flight.html',
+
+    controller: function ($scope) {
+        var timer = {
+            minutes: 302,
+            seconds: 32
+        }
+        setInterval(function(){
+            if (timer.seconds > 0) {
+                timer.seconds -= 1;
+            } else {
+                timer.minutes -= 1;
+                timer.seconds = 60;
+            }
+            $scope.$apply()
+        }, 1000)
+        $scope.timer = timer;
+
+        document.getElementById('#actionButton')
+
+    }
+  };
+})
+.directive('backImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')',
+            'background-size' : 'cover',
+            'background-repeat': 'no-repeat'
+        });
+    }
+})
+.directive('timer', function() {
     return {
         restrict: 'E',
         transclude: true,

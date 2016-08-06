@@ -80,30 +80,66 @@ angular.module('qff.services')
         }
     }
 })
+.factory('tasks', function() {
+    var tasks= [];
+    tasks.lax = [
+        {
+            icon: "fa fa-suitcase",
+            text: "Collect your luggage from carousel 3"
+        },
+        {
+            icon: "fa fa-suitcase",
+            text: "Go back through immigration and customs, put your baggage in the transfer area"
+        },
+        {
+            icon: "fa fa-bus",
+            text: "Walk to terminal 3, or get the free shuttle bus"
+        },
+        {
+            icon: "fa fa-ticket",
+            text: "Go through Domestic departures"
+        },
+        {
+            icon: "fa fa-plane",
+            text: "Go to gate B17"
+        },
+    ];
+
+    return {
+        all: function() {
+            return tasks;
+        }
+    }
+})
 .factory('ideas', function() {
     var ideas= [];
     ideas.lax = [
         {
-            icon: "ion-ios-home",
-            text: "Collect your luggage from carousel 3"
+            icon: "ion-ios-wineglass",
+            text: "Your Qantas FF get's you access to the American Airlines Admirals Club in Terminal 4"
+        },
+    ];
+    ideas.syd = [
+        {
+            icon: "ion-ios-wineglass",
+            text: "Your Qantas FF get's you access to the Qantas Club near the duty free"
         },
         {
-            icon: "ion-ios-home",
-            text: "Go back through immigration and customs, put your baggage in the transfer area"
-        },
-        {
-            icon: "ion-ios-home",
-            text: "Walk to terminal 3, or get the free shuttle bus"
-        },
-        {
-            icon: "ion-ios-telephone",
-            text: "Go through Domestic departures"
-        },
-        {
-            icon: "ion-ios-telephone",
-            text: "Go to gate B17"
-        },
-    ]
+            icon: 'ion-android-restaurant',
+            text: 'If you fancy something different for lunch, Qantas Platinum members get 20% off at the bank st. diner'
+        }
+    ];
+    ideas.preflight = [
+      {
+        icon: 'ion-happy-outline',
+        text: 'You\'ve got some big flights ahead, why don\'t you do some pre-flight exercise?'
+      },
+      {
+        icon: 'ion-earth',
+        text: 'You only have 1h45m to transfer at LA, why don\'t you consider getting a later transfer and checking out some of the sights in Los Angeles?',
+        link: 'http://travelinsider.qantas.com.au/north-america/usa/los-angeles'
+      }
+    ];
     return {
         all: function() {
             return ideas;
