@@ -57,12 +57,12 @@ angular.module('qff.services', [])
         },
         {
             id: 0,
-            question: "I've lost my passport",
+            question: "Where is the gate?",
             answer: "It's always in the last place you look!"
         },
         {
             id: 0,
-            question: "I've lost my passport",
+            question: "I'm all out of love.",
             answer: "It's always in the last place you look!"
         },
     ]
