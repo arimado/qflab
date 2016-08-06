@@ -66,7 +66,6 @@ angular.module('qff.services', [])
             answer: "It's always in the last place you look!"
         },
     ]
-
     return {
         all: function() {
             return questions;
