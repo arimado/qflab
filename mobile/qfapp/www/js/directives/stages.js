@@ -53,9 +53,12 @@ angular.module('qff.directives')
                 timer.minutes -= 1;
                 timer.seconds = 60;
             }
-            $scope.$apply() 
+            $scope.$apply()
         }, 1000)
         $scope.timer = timer;
+
+        document.getElementById('#actionButton')
+
     }
   };
 })
