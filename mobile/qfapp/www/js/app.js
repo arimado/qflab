@@ -58,7 +58,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
         controller: 'StoryCtrl'
       }
     }
-}) 
+})
 
   .state('tab.chats', {
       url: '/chats',
