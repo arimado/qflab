@@ -1,7 +1,7 @@
 angular.module('qff.controllers', [])
 .controller('DashCtrl', function($scope) {})
 .controller('ChatsCtrl', function($scope) {})
-.controller('StoryCtrl', function($scope, todo, question) {
+.controller('StoryCtrl', function($scope, $location, $ionicScrollDelegate, todo, question) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -16,7 +16,11 @@ angular.module('qff.controllers', [])
   $scope.remove = function(task) {
     todo.remove(task);
   };
-  
+  $scope.scrollTo = function (id) {
+      $location.hash(id);
+      var delegateHandle = $ionicScrollDelegate.$getByHandle('storyView');
+      delegateHandle.anchorScroll(id);
+   };
   $scope.share = function() {
 
    // Show the action sheet
