@@ -8,10 +8,10 @@
       <span> <i class="icon ion-location"></i> {{location}} </span>
     </div>
     <div class="col item-icon-right">
-      <i ng-show='completed' class="icon pull-right ion-android-done"></i>  
+      <i ng-show='completed' class="icon pull-right ion-android-done"></i>
     </div>
   </div>
-  
+
   <div style="position: relative">
       <img src="img/{{airport}}.jpeg" width=100%>
     </div>
@@ -24,7 +24,7 @@
             {{idea.text}}
           </a>
         </div>
-        <div class=>
+        <div>
           <a class="item item-icon-left">
             <i class="icon ion-plane"></i>
             <p> You have </p>
@@ -36,11 +36,11 @@
   </div>
     <div class="item item-divider" ng-show="!completed_toggle">
    <button class="button icon ion-ios-arrow-down" ng-click="completed_toggle = !completed_toggle"></button>
-    
+
   </div>
  <div class="item item-divider" ng-show="completed_toggle">
     <button class="button icon ion-ios-arrow-up" ng-click="completed_toggle = !completed_toggle"></button>
-    
+
     <button class="button icon ion-share" ng-click="share()"></button>
   </div>
 
