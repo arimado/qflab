@@ -1,7 +1,7 @@
 angular.module('qff.controllers', [])
 .controller('DashCtrl', function($scope) {})
 .controller('ChatsCtrl', function($scope) {})
-.controller('StoryCtrl', function($scope, $location, $ionicScrollDelegate, todo, tasks, stages, question, ideas) {
+.controller('StoryCtrl', function($scope, $location, $state, $ionicScrollDelegate, todo, tasks, stages, question, ideas) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -15,6 +15,11 @@ angular.module('qff.controllers', [])
   $scope.tasks = tasks.all();
   $scope.ideas = ideas.all();
   $scope.questions = question.all();
+
+  $scope.navigateTo = function (path) {
+      console.log('navigate')
+      $state.go("tab.chats")
+  }
 
   $scope.remove = function(task) {
     todo.remove(task);
@@ -32,11 +37,6 @@ angular.module('qff.controllers', [])
     $scope.stages = stages.all($scope.person);
     $scope.$apply();
   };
-
-  $scope.navigateTo = function (path) {
-      console.log('navigate')
-      $location.path( path );
-  }
 
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({

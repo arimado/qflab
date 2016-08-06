@@ -15,10 +15,30 @@
   <div class='item item-image'>
     <div back-img="img/{{airport}}.jpeg" style='min-height:200px' width='100%'>
       <div class='weather'><i class='icon ion-android-cloud-outline'></i>  +20 &deg;C</div>
-      <div class='city'>{{location}}</div>
+      <div class='city'>
+          TRANSFER
+        <p style="color: white; margin-top: 10px;"> SYD-LAX > LAX-SFO </p>
+      </div>
     </div>
+
   </div>
   <div class="item item-text-wrap" ng-show="!completed || completed_toggle">
+      <div class='row'>
+        <div class='col col-25'>
+          <img src='img/departure.svg' style='padding-top: 5px'/>
+        </div>
+        <div class='col col-25'>
+          <h4>Departure</h4>
+          <h3>{{deptime}}</h3>
+        </div>
+        <div class='col col-25'>
+          <img src='img/arrivalicon.svg'/>
+        </div>
+        <div class='col col-25'>
+          <h4>Arrival</h4>
+          <h3>{{arrtime}}</h3>
+        </div>
+      </div>
 
         <div class="list card">
           <a class="item item-icon-left" ng-repeat='task in tasks'>
@@ -26,7 +46,8 @@
             {{task.text}}
           </a>
         </div>
-        <div>
+
+        <div class="row">
           <a class="item item-icon-left">
             <i class="icon ion-plane"></i>
             <p> You have </p>
@@ -34,7 +55,7 @@
             <p> to get to gate B17 </p>
           </a>
       </div>
-        
+
       <h2>If you have some time, why not make the most of your time in {{airportname}} after all this is your first time there!</h2>
 
     <div class="list card">

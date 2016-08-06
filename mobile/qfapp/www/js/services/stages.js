@@ -34,7 +34,10 @@ angular.module('qff.services')
     terminal: '2',
     gate: 'A56',
     current: true,
-    completed: false
+    completed: false,
+    deptime: '10:55 AM',
+    arrtime: '13:45 PM',
+    traveltime: '2h50m',
   },
   {
     id: 3,
@@ -61,17 +64,22 @@ angular.module('qff.services')
     gate: 'J16',
     completed: false,
     },
-  {
-    id: 5,
-    type: 'holiday',
-    transfertype: 'International',
-    airport: 'lax',
-    airportname: 'LAX (International)',
-    location: 'South LA, USA',
-    terminal: '2',
-    gate: 'A56',
-    completed: false
-  }
+      {
+        id: 5,
+        type: 'transfers',
+        transfertype: 'International',
+        airport: 'lax',
+        airportname: 'asdasdasdasd',
+        location: 'asdasdasdasd',
+        terminal: '2',
+        gate: 'A56',
+        completed: false,
+        destination: 'San Francisco, USA',
+        location: 'San Francisco, USA',
+        deptime: '10:55 AM',
+        arrtime: '13:45 PM',
+        traveltime: '2h50m',
+      }
   ];
 
   return {

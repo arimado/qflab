@@ -47,7 +47,11 @@ angular.module('qff.directives')
       'type': '=type',
       'completed': '=completed',
       'ideas': '=ideas',
-      'tasks': '=tasks'
+      'tasks': '=tasks',
+      'deptime': '=deptime',
+      'arrtime': '=arrtime',
+      'traveltime': '=traveltime',
+      'gate': '=gate',
     },
     templateUrl: 'templates/directives/stage.transfer.html',
 

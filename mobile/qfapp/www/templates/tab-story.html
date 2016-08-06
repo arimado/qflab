@@ -10,14 +10,16 @@
     <button class="button button-clear button-light" ng-click='scrollTo("stage-{{stage.id}}")' ng-show="!stage.completed && !stage.current">
     <i class="icon ion-android-radio-button-off"></i>
     </button>
+
   </div>
 
 
     <div class="row" id="chatIconContainer">
-      <button class="button button-clear button-light col-offset-80" ng-click='navigateTo("#/tab/chat")'>
-      <i class="icon ion-ios-chatboxes"></i>
+      <button class="button button-clear button-light col-offset-80" ng-click='navigateTo("/chat")'>
+          <a href="#/tab/chat"> <i class="icon ion-ios-chatboxes"></i> </a>
       </button>
   </div>
+
 
 
 </div>
@@ -53,7 +55,10 @@
             gate="'B17'",
             tasks='tasks[stage.airport]',
             ideas='ideas[stage.airport]',
-            completed="stage.completed">
+            completed="stage.completed",
+            deptime='stage.deptime'
+            arrtime='stage.arrtime'
+            traveltime='stage.traveltime'>
         </transfer>
         </div>
         <div ng-switch-when="flight">
