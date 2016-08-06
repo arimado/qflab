@@ -7,7 +7,6 @@
 
 .onBoard {
     height: 100%;
-    background: blue;
 }
 
 .onBoardView ion-content {
@@ -18,5 +17,4 @@
     background: grey;
     flex: 1;
     display: flex;
-
 }
