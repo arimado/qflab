@@ -1,11 +1,23 @@
 <div class="card">
-  <div class="item item-divider">
-    Pre-Flight
+  <div class="item item-divider row">
+    <div class="col item-icon-left">
+      <i class="icon ion-tshirt-outline"></i>
+    </div>
+    <div class="col col-50">
+      <h3>Pre-Flight</h3>
+      <span> <i class="icon ion-location"></i> {{location}} </span>
+    </div>
+    <div class="col item-icon-right">
+      <i class="icon pull-right ion-android-done"></i>  
+    </div>
+    
+    
+    
   </div>
   <div style="position: relative">
       <img src="img/{{airport}}.jpeg" width=100%>
     </div>
-  <div class="item item-text-wrap">
+  <div class="item item-text-wrap" ng-show="completed">
     
     <p>
       {{days}} days until you fly to {{destination}}!
@@ -15,9 +27,11 @@
     <todo data="tasks"></todo>
 
   </div>
-  <div class="item item-divider">
-    <a class="button icon-right ion-chevron-right button-calm">Learn More</a>
+  <div class="item item-divider" ng-show="completed">
+   <button class="button icon ion-ios-arrow-up" ng-click="completed = !completed"></button>
     <button class="button icon ion-share" ng-click="share()"></button>
   </div>
-
+ <div class="item item-divider" ng-show="!completed">
+    <button class="button icon ion-ios-arrow-down" ng-click="completed = !completed"></button>
+  </div>
 </div>

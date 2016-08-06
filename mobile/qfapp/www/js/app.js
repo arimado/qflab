@@ -90,3 +90,4 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
 });
 
 angular.module('qff.directives', []);
+angular.module('qff.services', [])

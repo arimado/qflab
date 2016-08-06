@@ -24,7 +24,6 @@ $calm: #EE0000 !default;
 // $light: #345345 !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
 $font-family-base: "BrauerNeueRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
  
 .item-bold {
@@ -38,7 +37,7 @@ ion-content.cards-bg {
 p, div,  span {
   font-family: 'BrauerNeueRegular'
 }
-h1, h2 {
+h1, h2, h3, h4 {
     font-family: 'BrauerNeueBold'
 }
 /* Brauer Neue Regular */

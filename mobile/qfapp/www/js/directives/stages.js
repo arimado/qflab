@@ -9,6 +9,7 @@ angular.module('qff.directives')
       'destination': '=destination',
       'airport': '=airport',
       'tasks': '=tasks',
+      'location': '=location',
       'share': '&share'
     },
     templateUrl: 'templates/directives/stage.preflight.html'
@@ -38,7 +39,7 @@ angular.module('qff.directives')
       'terminal': '=terminal',
       'type': '=type'
     },
-    templateUrl: 'templates/directives/stage.transfer.html'
+    templateUrl: 'templates/directives/stage.transfer.html',
   };
 })
 
