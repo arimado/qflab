@@ -2,7 +2,7 @@ angular.module('qff.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, todo) {
+.controller('ChatsCtrl', function($scope, todo, question) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -12,6 +12,8 @@ angular.module('qff.controllers', [])
   //});
 
   $scope.tasks = todo.all();
+  $scope.questions = question.all();
+
   $scope.remove = function(task) {
     todo.remove(task);
   };

@@ -47,4 +47,37 @@ angular.module('qff.services', [])
       return null;
     }
   };
+})
+.factory('question', function() {
+    var questions = [
+        {
+            id: 0,
+            question: "I've lost my passport",
+            answer: "It's always in the last place you look!"
+        },
+        {
+            id: 0,
+            question: "I've lost my passport",
+            answer: "It's always in the last place you look!"
+        },
+        {
+            id: 0,
+            question: "I've lost my passport",
+            answer: "It's always in the last place you look!"
+        },
+    ]
+
+    return {
+        all: function() {
+            return questions;
+        },
+        get: function(id) {
+          for (var i = 0; i < questions.length; i++) {
+            if (questions[i].id === parseInt(id)) {
+              return questions[i];
+            }
+          }
+          return null;
+        }
+    }
 });

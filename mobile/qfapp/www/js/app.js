@@ -59,7 +59,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
         }
       }
     })
-    
+
 
   .state('tab.account', {
     url: '/account',
@@ -70,7 +70,7 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
       }
     }
   })
-  
+
   .state('stage.preflight', {
     url: '/preflight',
     views: {
@@ -86,3 +86,5 @@ angular.module('qff', ['ionic', 'qff.controllers', 'qff.services', 'qff.directiv
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+angular.module('qff.directives', []);
